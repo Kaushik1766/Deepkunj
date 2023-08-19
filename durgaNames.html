@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
                 <ul class="navbar-nav col-lg-11 justify-content-lg-around">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -67,19 +67,19 @@
     </nav>
 
     <!-- names -->
-    <div class="container px-4 py-5">
-        <div class="row">
+    <div class="container px-4 py-5 mx-auto">
+        <div class="row table-responsive">
             <h1 class="">
                 108 Durga Names with their meanings
             </h1>
-            <table class="">
-                <thead>
+            <table class="table table-striped table-bordered my-5">
+                <thead class="table-dark">
                     <tr>
                         <th>Name</th>
                         <th>Meaning</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                     <tr>
                         <td>Durga</td>
                         <td>The Inaccessible</td>
@@ -522,9 +522,38 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <!-- footer -->
+    <div class="container">
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary"><strong>Created by:</strong> Kaushik Saha <br>
+                    <strong>Email:</strong> kaushiksaha004@gmail.com</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="https://github.com/Kaushik1766" target="_blank"><i
+                            class="bi bi-github"></i>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/kaushiksaha176/"
+                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary"
+                        href="https://www.linkedin.com/in/kaushik-saha-6187b9249/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="mailto:kaushiksaha004@gmail.com"
+                        target="_blank"><i class="bi bi-envelope-at-fill"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
