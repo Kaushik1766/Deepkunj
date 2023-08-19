@@ -17,16 +17,18 @@ dark.addEventListener("click", () => {
 function themeToggler(theme) {
     document.querySelector("body").setAttribute("data-bs-theme", theme);
     // localStorage.setItem("theme", theme);
-    if (theme == "dark") {
-        document.getElementById("durgaFace").style.filter = "invert(90%)";
-        document.querySelectorAll(".emb").forEach((item) => {
-            item.style.filter = "invert(90%)";
-        });
-    }
-    else {
-        document.getElementById("durgaFace").style.filter = "none";
-        document.querySelectorAll(".emb").forEach((item) => {
-            item.style.filter = "none";
-        });
+    if (window.location.pathname === '/Deepkunj/index.html') {
+        if (theme == "dark") {
+            document.getElementById("durgaFace").style.filter = "invert(90%)";
+            document.querySelectorAll(".emb").forEach((item) => {
+                item.style.filter = "invert(90%)";
+            });
+        }
+        else {
+            document.getElementById("durgaFace").style.filter = "none";
+            document.querySelectorAll(".emb").forEach((item) => {
+                item.style.filter = "none";
+            });
+        }
     }
 }
