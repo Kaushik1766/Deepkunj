@@ -72,7 +72,7 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
                             <li>
                                 <button id="light" type="button" class="dropdown-item d-flex align-items-center "
-                                    data-bs-theme-value="light" aria-pressed="true">
+                                    data-bs-theme-value="light" aria-pressed="true" onclick="inverter('light')">
                                     <i class="bi bi-brightness-high"></i>
                                     Light
 
@@ -80,7 +80,7 @@
                             </li>
                             <li>
                                 <button id="dark" type="button" class="dropdown-item d-flex align-items-center"
-                                    data-bs-theme-value="dark" aria-pressed="false">
+                                    onclick="inverter('dark')" data-bs-theme-value="dark" aria-pressed="false">
                                     <i class="bi bi-moon-stars-fill"></i>
                                     Dark
 
@@ -343,7 +343,22 @@
     </div>
 
     <script src="./index.js"></script>
-
+    <script>
+        function inverter(theme) {
+            if (theme == "dark") {
+                document.getElementById("durgaFace").style.filter = "invert(90%)";
+                document.querySelectorAll(".emb").forEach((item) => {
+                    item.style.filter = "invert(90%)";
+                });
+            }
+            else {
+                document.getElementById("durgaFace").style.filter = "none";
+                document.querySelectorAll(".emb").forEach((item) => {
+                    item.style.filter = "none";
+                });
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
