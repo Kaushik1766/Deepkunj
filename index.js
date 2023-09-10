@@ -16,6 +16,15 @@ dark.addEventListener("click", () => {
 
 function themeToggler(theme) {
     document.querySelector("body").setAttribute("data-bs-theme", theme);
+    if (theme == "dark") {
+        document.querySelector("nav").classList.add("bg-dark");
+        document.querySelector("nav").classList.remove("bg-primary");
+    }
+    else {
+        document.querySelector("nav").classList.remove("bg-dark");
+        document.querySelector("nav").classList.add("bg-primary");
+        document.querySelector("nav").setAttribute("data-bs-theme", "dark");
+    }
     // localStorage.setItem("theme", theme);
     // if (window.location.pathname === '/Deepkunj/index.html') {
     //     if (theme == "dark") {

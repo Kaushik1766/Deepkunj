@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap.css">
+
 </head>
 
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Deepkunj Puja Samiti
             </a>
@@ -33,8 +33,8 @@
                             Pujas
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Durga Puja</a></li>
-                            <li><a class="dropdown-item" href="#">Kali Puja</a></li>
+                            <li><a class="dropdown-item" href="./durgaPuja.html">Durga Puja</a></li>
+                            <li><a class="dropdown-item" href="./kaliPuja.html">Kali Puja</a></li>
                             <li><a class="dropdown-item" href="#">Lakshmi Puja</a></li>
                             <li><a class="dropdown-item" href="#">Saraswati Puja</a></li>
                         </ul>
@@ -54,13 +54,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
+                        <a class="nav-link" href="./donate.html">Donate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="./contactUs.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <button
@@ -73,7 +73,7 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
                             <li>
                                 <button id="light" type="button" class="dropdown-item d-flex align-items-center "
-                                    data-bs-theme-value="light" aria-pressed="true">
+                                    data-bs-theme-value="light" aria-pressed="true" onclick="inverter('light')">
                                     <i class="bi bi-brightness-high"></i>
                                     Light
 
@@ -81,7 +81,7 @@
                             </li>
                             <li>
                                 <button id="dark" type="button" class="dropdown-item d-flex align-items-center"
-                                    data-bs-theme-value="dark" aria-pressed="false">
+                                    onclick="inverter('dark')" data-bs-theme-value="dark" aria-pressed="false">
                                     <i class="bi bi-moon-stars-fill"></i>
                                     Dark
 
@@ -97,7 +97,7 @@
     <div class="container text-center text-lg-start">
         <div class="row py-5">
             <div class="col-10 mx-auto p-2">
-                <h3>About Us</h3>
+                <h3 class="text-body-emphasis">About Us</h3>
             </div>
             <div class="col-10 mx-auto p-2">
                 <p>DeepKunj Sarvojanin Puja Samiti, established in the auspicious year of 1988, stands as a beacon of
@@ -117,7 +117,7 @@
                 </p>
             </div>
             <div class="col-10 mx-auto p-2">
-                <h3>Our Mission</h3>
+                <h3 class="text-body-emphasis">Our Mission</h3>
             </div>
             <div class="col-10 mx-auto p-2">
                 <p>At DeepKunj Sarvojanin Puja Samiti, our mission transcends the mere celebration of pujas. We are
@@ -127,7 +127,7 @@
                 </p>
             </div>
             <div class="col-10 mx-auto p-2">
-                <h3>Community Engagement
+                <h3 class="text-body-emphasis">Community Engagement
                 </h3>
             </div>
             <div class="col-10 mx-auto p-2">
@@ -138,7 +138,7 @@
                 </p>
             </div>
             <div class="col-10 mx-auto p-2">
-                <h3>Preserving Tradition
+                <h3 class="text-body-emphasis">Preserving Tradition
                 </h3>
             </div>
             <div class="col-10 mx-auto p-2">
@@ -150,7 +150,7 @@
                 </p>
             </div>
             <div class="col-10 mx-auto p-2">
-                <h3>Get Involved
+                <h3 class="text-body-emphasis">Get Involved
 
 
                 </h3>
