@@ -12,7 +12,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Deepkunj Puja Samiti
             </a>
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
                 <ul class="navbar-nav col-lg-11 justify-content-lg-around">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -32,8 +32,8 @@
                             Pujas
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Durga Puja</a></li>
-                            <li><a class="dropdown-item" href="#">Kali Puja</a></li>
+                            <li><a class="dropdown-item" href="./durgaPuja.html">Durga Puja</a></li>
+                            <li><a class="dropdown-item" href="./kaliPuja.html">Kali Puja</a></li>
                             <li><a class="dropdown-item" href="#">Lakshmi Puja</a></li>
                             <li><a class="dropdown-item" href="#">Saraswati Puja</a></li>
                         </ul>
@@ -53,13 +53,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
+                        <a class="nav-link" href="./donate.html">Donate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link active" href="./contactUs.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <button
@@ -72,7 +72,7 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
                             <li>
                                 <button id="light" type="button" class="dropdown-item d-flex align-items-center "
-                                    data-bs-theme-value="light" aria-pressed="true">
+                                    data-bs-theme-value="light" aria-pressed="true" onclick="inverter('light')">
                                     <i class="bi bi-brightness-high"></i>
                                     Light
 
@@ -80,7 +80,7 @@
                             </li>
                             <li>
                                 <button id="dark" type="button" class="dropdown-item d-flex align-items-center"
-                                    data-bs-theme-value="dark" aria-pressed="false">
+                                    onclick="inverter('dark')" data-bs-theme-value="dark" aria-pressed="false">
                                     <i class="bi bi-moon-stars-fill"></i>
                                     Dark
 
