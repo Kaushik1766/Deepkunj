@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deepkunj Sarvojanin Puja Samiti</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="bootstrap.css">
 </head>
 
-<body onload="inverter(localStorage.getItem('theme'))">
+<body onload="inverter(localStorage.getItem('theme'))" style="scroll-snap-type: none;">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-transparent fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Deepkunj Puja Samiti
-            </a>
+            <div class="wrapper">
+                <a class="navbar-brand typing-demo" href="#">
+                    Deepkunj Puja Samiti
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -93,9 +97,28 @@
         </div>
     </nav>
 
+    <script>
+        window.addEventListener("scroll", () => {
+            let nav = document.querySelector("nav");
+            if (window.scrollY > 500) {
+                nav.classList.remove("bg-transparent");
+                nav.classList.add("bg-primary");
+                document.querySelector("body").style.scrollSnapType = none;
+            }
+            else {
+                nav.classList.remove("bg-primary");
+                nav.classList.add("bg-transparent");
+            }
+        })
+    </script>
+
+    <!-- banner -->
+    <div class="banner d-flex align-items-center justify-content-center">
+    </div>
+
     <!-- intro -->
-    <div class="container col-xxl-8 px-4 text-center text-lg-start my-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="container col-xxl-8 px-4 text-center text-lg-start my-5 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mt-5">
             <div class="col-10 col-sm-8 col-lg-6 mx-auto">
                 <img src="./images/durgaFaceLight.png" class="d-block mx-lg-auto img-fluid" alt="Durga Face"
                     id="durgaFace" width="700" height="500" loading="lazy">
@@ -105,25 +128,11 @@
                 <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <clipPath id="rect-cp">
-                            <rect id="rect" x="0" y="0" width="0" height="1">
-                                <animate id="anim" attributeName="width" dur="1s" fill="freeze" calcMode="spline"
-                                    keyTimes="0; 1" keySplines="0.5,0,0.5,1" values="0;1" />
+                            <rect id="rect" x="0" y="0" width="1" height="1">
                             </rect>
                         </clipPath>
-                        <clipPath id="rect-cp-indefinite">
-                            <rect id="rect" x="0" y="0" width="0" height="1">
-                                <animate id="anim-indefinite" attributeName="width" dur="1s" calcMode="spline"
-                                    keyTimes="0; 1" keySplines="0.5,0,0.5,1" values="0;1"
-                                    begin="0s;anim-indefinite.end+1s" />
-                            </rect>
-                        </clipPath>
-
                         <clipPath id="clip" clipPathUnits="objectBoundingBox">
                             <use href="#brush-shape" clip-path="url(#rect-cp)" />
-                        </clipPath>
-
-                        <clipPath id="clip-indefinite" clipPathUnits="objectBoundingBox">
-                            <use href="#brush-shape" clip-path="url(#rect-cp-indefinite)" />
                         </clipPath>
 
                         <path id="brush-shape"
@@ -253,14 +262,21 @@
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center text-lg-start">Our Spotify
                     Playlist</h1>
-                <p class="lead text-center text-lg-start">We extend a warm invitation to you to join us at the heart of
-                    our Durga Puja festivities - the vibrant Community Hall! Located at the crossroads of tradition and
-                    togetherness, our Community Hall has been transformed into a haven of joy, color, and devotion for
-                    this special occasion. Immerse yourself in the intricate decorations that pay homage to the goddess
-                    Durga and her divine aura. The air is charged with excitement as families and friends gather under
-                    one roof to celebrate unity, culture, and the triumph of good over evil. Our doors are open wide,
+                <p class="lead text-center text-lg-start">We extend a warm invitation to you to join us at the heart
+                    of
+                    our Durga Puja festivities - the vibrant Community Hall! Located at the crossroads of tradition
+                    and
+                    togetherness, our Community Hall has been transformed into a haven of joy, color, and devotion
+                    for
+                    this special occasion. Immerse yourself in the intricate decorations that pay homage to the
+                    goddess
+                    Durga and her divine aura. The air is charged with excitement as families and friends gather
+                    under
+                    one roof to celebrate unity, culture, and the triumph of good over evil. Our doors are open
+                    wide,
                     ready to welcome you to experience the magic of Durga Puja in all its grandeur. Join us at the
-                    Community Hall and be a part of this unforgettable celebration that brings people together in the
+                    Community Hall and be a part of this unforgettable celebration that brings people together in
+                    the
                     spirit of joy and reverence.</p>
             </div>
         </div>
@@ -276,7 +292,8 @@
                     <h3 class="fs-2 text-body-emphasis">Durga Puja</h3>
                     <p>Durga Puja is a vibrant Hindu festival celebrating the goddess Durga's
                         valor with elaborate
-                        rituals and artistic displays. It unites communities in honoring her power and the victory of
+                        rituals and artistic displays. It unites communities in honoring her power and the victory
+                        of
                         good over evil.</p>
                     <a href="./durgaPuja.html" class="btn btn-primary">
                         Visit site
@@ -300,7 +317,8 @@
                     <h3 class="fs-2 text-body-emphasis">Lakshmi Puja</h3>
                     <p>Lakshmi Puja: Celebrates goddess Lakshmi, symbolizing wealth and
                         prosperity, with illuminated
-                        homes, intricate rangoli designs, and heartfelt prayers for abundance and fortune. A cherished
+                        homes, intricate rangoli designs, and heartfelt prayers for abundance and fortune. A
+                        cherished
                         Hindu festival fostering a sense of renewal and gratitude.</p>
                     <a href="#" class="btn btn-primary">
                         Visit site
@@ -312,7 +330,8 @@
                     <h3 class="fs-2 text-body-emphasis">Saraswati Puja</h3>
                     <p>Saraswati Puja: A vibrant Hindu festival dedicated to goddess Saraswati,
                         patron of knowledge,
-                        arts, and learning. Celebrated with prayers, music, and educational tools, it inspires seekers
+                        arts, and learning. Celebrated with prayers, music, and educational tools, it inspires
+                        seekers
                         of wisdom.</p>
                     <a href="#" class="btn btn-primary">
                         Visit site
@@ -333,15 +352,18 @@
             </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center text-lg-end">Visit Us</h1>
-                <p class="lead text-center text-lg-end">Namaste and welcome to our vibrant Durga Puja celebration! As
+                <p class="lead text-center text-lg-end">Namaste and welcome to our vibrant Durga Puja celebration!
+                    As
                     we honor the
                     divine
-                    goddess and celebrate her strength, we invite you to join us on a musical journey that encapsulates
+                    goddess and celebrate her strength, we invite you to join us on a musical journey that
+                    encapsulates
                     the spirit of this joyous occasion.
 
                     We've carefully curated a mesmerizing Spotify playlist that captures the essence of Durga Puja -
                     from the majestic beats of the dhak to the soul-stirring chants that resonate through the
-                    festivities. This playlist is not just a collection of songs; it's a tapestry of emotions, devotion,
+                    festivities. This playlist is not just a collection of songs; it's a tapestry of emotions,
+                    devotion,
                     and pure exhilaration.</p>
             </div>
         </div>
@@ -374,7 +396,6 @@
             </ul>
         </footer>
     </div>
-
     <script src="./index.js"></script>
     <script>
         function inverter(theme) {
