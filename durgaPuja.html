@@ -12,10 +12,13 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Deepkunj Puja Samiti
-            </a>
+            <div class="wrapper">
+                <a class="navbar-brand typing-demo" href="./index.html">
+                    Deepkunj Puja Samiti
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -93,7 +96,7 @@
         </div>
     </nav>
 
-    <div class="container text-center text-lg-start col-xxl-8 px-4 py-3 py-lg-5">
+    <div class="container text-center text-lg-start col-xxl-8 px-4 py-3 py-lg-5 hid">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-2 py-lg-5">
             <div class="col-12 col-sm-8 mx-auto col-lg-6">
                 <img src="./images/deepkunjBanner.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
@@ -104,24 +107,11 @@
                 <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <clipPath id="rect-cp">
-                            <rect id="rect" x="0" y="0" width="0" height="1">
-                                <animate id="anim" attributeName="width" dur="1s" fill="freeze" calcMode="spline"
-                                    keyTimes="0; 1" keySplines="0.5,0,0.5,1" values="0;1" />
-                            </rect>
-                        </clipPath>
-                        <clipPath id="rect-cp-indefinite">
-                            <rect id="rect" x="0" y="0" width="0" height="1">
-                                <animate id="anim-indefinite" attributeName="width" dur="1s" calcMode="spline"
-                                    keyTimes="0; 1" keySplines="0.5,0,0.5,1" values="0;1"
-                                    begin="0s;anim-indefinite.end+1s" />
+                            <rect id="rect" x="0" y="0" width="1" height="1">
                             </rect>
                         </clipPath>
                         <clipPath id="clip" clipPathUnits="objectBoundingBox">
                             <use href="#brush-shape" clip-path="url(#rect-cp)" />
-                        </clipPath>
-
-                        <clipPath id="clip-indefinite" clipPathUnits="objectBoundingBox">
-                            <use href="#brush-shape" clip-path="url(#rect-cp-indefinite)" />
                         </clipPath>
 
                         <path id="brush-shape"
@@ -139,8 +129,8 @@
     </div>
     </div>
 
-    <div class="container text-center text-lg-start py-5 my-5">
-        <h2 class="pb-2 border-bottom">Our Durga Pooja Brochure for 2023</h2>
+    <div class="container text-center text-lg-start py-5 my-5 hid">
+        <h2 class="pb-2 border-bottom text-body-emphasis">Our Durga Pooja Brochure for 2023</h2>
         <div class="row my-4">
             <div id="carouselExampleCaptions" class="carousel slide col-lg-5 my-5 col-sm-8 mx-auto">
                 <div class="carousel-indicators">

@@ -14,6 +14,23 @@ dark.addEventListener("click", () => {
 
 });
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('vis');
+        }
+        // else {
+        //     entry.target.classList.remove('vis');
+        // }
+    });
+})
+
+
+const hiddenElements = document.querySelectorAll(".hid");
+
+hiddenElements.forEach((el) => observer.observe(el));
+
 function themeToggler(theme) {
     document.querySelector("body").setAttribute("data-bs-theme", theme);
     if (theme == "dark") {

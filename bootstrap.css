@@ -202,6 +202,7 @@
   --bs-form-valid-border-color: #93d9ab;
   --bs-form-invalid-color: #e89895;
   --bs-form-invalid-border-color: #e89895;
+  /* --bs-primary-rgb: 50, 50, 50; */
 
   .btn-primary {
     --bs-btn-color: #1a1a1a;
@@ -230,21 +231,21 @@
 
 .nav-bg {
   --bs-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(50, 50, 50, 0);
 }
 
 .hid {
   opacity: 0;
-  /* filter: blur(5px);
-  transform: translateX(-100%); */
-  transition: all 2s;
+  filter: blur(5px);
+  transform: translateY(20%);
+  transition: all 1s;
 }
 
 .vis {
   opacity: 1;
-  /* filter: blur(0px);
-  transform: translateX(0%);
-  transition: all 2s; */
+  filter: blur(0px);
+  transform: translateY(0%);
+  /* transition: all 2s; */
 }
 
 

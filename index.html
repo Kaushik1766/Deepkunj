@@ -101,25 +101,9 @@
     <div class="banner d-flex align-items-center justify-content-center">
     </div>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            let nav = document.querySelector("nav");
-            // if (window.scrollY > 500) {
-            nav.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 750})`;
-            //     nav.classList.remove("bg-transparent");
-            //     nav.classList.add("bg-primary");
-            //     document.querySelector("body").style.scrollSnapType = none;
-            // }
-            // else {
-            //     nav.classList.remove("bg-primary");
-            //     nav.classList.add("bg-transparent");
-            // }
-        });
-    </script>
-
     <!-- intro -->
-    <div class="container col-xxl-8 px-4 text-center text-lg-start my-5 pt-5 hid">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mt-5">
+    <div class="container col-xxl-8 px-4 text-center text-lg-start my-5 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mt-5 hid">
             <div class="col-10 col-sm-8 col-lg-6 mx-auto">
                 <img src="./images/durgaFaceLight.png" class="d-block mx-lg-auto img-fluid" alt="Durga Face"
                     id="durgaFace" width="700" height="500" loading="lazy">
@@ -175,7 +159,7 @@
 
     <!-- know more about durga puja -->
     <div class="container px-4 py-5 text-center text-lg-start hid" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Know more about Durga Puja</h2>
+        <h2 class="pb-2 border-bottom text-body-emphasis">Know more about Durga Puja</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="col d-flex align-items-start">
                 <div>
@@ -286,7 +270,7 @@
 
     <!-- Pujas we organize -->
     <div class="container px-4 py-5 text-center text-lg-start hid" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Pujas we Organize</h2>
+        <h2 class="pb-2 border-bottom text-body-emphasis">Pujas we Organize</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
             <div class="col d-flex align-items-start">
                 <div>
@@ -425,12 +409,74 @@
                 //     entry.target.classList.remove('vis');
                 // }
             });
-        })
+        });
 
 
         const hiddenElements = document.querySelectorAll(".hid");
 
         hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+    <script>
+
+        themeToggler(localStorage.getItem("theme"));
+        var light = document.getElementById("light");
+        var dark = document.getElementById("dark");
+        light.addEventListener("click", () => {
+            localStorage.setItem("theme", "light");
+            themeToggler(localStorage.getItem("theme"));
+
+        });
+        dark.addEventListener("click", () => {
+            localStorage.setItem("theme", "dark");
+            themeToggler(localStorage.getItem("theme"));
+
+        });
+        function themeToggler(theme) {
+            document.querySelector("body").setAttribute("data-bs-theme", theme);
+            // if (theme == "dark") {
+            //     document.querySelector("nav").classList.add("bg-dark");
+            //     document.querySelector("nav").classList.remove("bg-primary");
+            // }
+            // else {
+            //     document.querySelector("nav").classList.remove("bg-dark");
+            //     document.querySelector("nav").classList.add("bg-primary");
+            //     document.querySelector("nav").setAttribute("data-bs-theme", "dark");
+            // }
+            // localStorage.setItem("theme", theme);
+            // if (window.location.pathname === '/Deepkunj/index.html') {
+            //     if (theme == "dark") {
+            //         document.getElementById("durgaFace").style.filter = "invert(90%)";
+            //         document.querySelectorAll(".emb").forEach((item) => {
+            //             item.style.filter = "invert(90%)";
+            //         });
+            //     }
+            //     else {
+            //         document.getElementById("durgaFace").style.filter = "none";
+            //         document.querySelectorAll(".emb").forEach((item) => {
+            //             item.style.filter = "none";
+            //         });
+            //     }
+            // }
+            window.addEventListener("scroll", () => {
+                let nav = document.querySelector("nav");
+                // if (window.scrollY > 500) {
+                if (theme == "dark") {
+                    nav.style.backgroundColor = `rgba(50,50,50,${window.scrollY / 750})`;
+                }
+                else {
+                    nav.style.backgroundColor = `rgba(26,26,26,${window.scrollY / 750})`;
+                }
+                //     nav.classList.remove("bg-transparent");
+                //     nav.classList.add("bg-primary");
+                //     document.querySelector("body").style.scrollSnapType = none;
+                // }
+                // else {
+                //     nav.classList.remove("bg-primary");
+                //     nav.classList.add("bg-transparent");
+                // }
+            });
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
