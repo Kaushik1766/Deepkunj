@@ -13,7 +13,7 @@
 
 <body onload="inverter(localStorage.getItem('theme'))" style="scroll-snap-type: none;">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-transparent fixed-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg nav-bg fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <div class="wrapper">
                 <a class="navbar-brand typing-demo" href="#">
@@ -97,27 +97,28 @@
         </div>
     </nav>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            let nav = document.querySelector("nav");
-            if (window.scrollY > 500) {
-                nav.classList.remove("bg-transparent");
-                nav.classList.add("bg-primary");
-                document.querySelector("body").style.scrollSnapType = none;
-            }
-            else {
-                nav.classList.remove("bg-primary");
-                nav.classList.add("bg-transparent");
-            }
-        })
-    </script>
-
     <!-- banner -->
     <div class="banner d-flex align-items-center justify-content-center">
     </div>
 
+    <script>
+        window.addEventListener("scroll", () => {
+            let nav = document.querySelector("nav");
+            // if (window.scrollY > 500) {
+            nav.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 750})`;
+            //     nav.classList.remove("bg-transparent");
+            //     nav.classList.add("bg-primary");
+            //     document.querySelector("body").style.scrollSnapType = none;
+            // }
+            // else {
+            //     nav.classList.remove("bg-primary");
+            //     nav.classList.add("bg-transparent");
+            // }
+        });
+    </script>
+
     <!-- intro -->
-    <div class="container col-xxl-8 px-4 text-center text-lg-start my-5 pt-5">
+    <div class="container col-xxl-8 px-4 text-center text-lg-start my-5 pt-5 hid">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mt-5">
             <div class="col-10 col-sm-8 col-lg-6 mx-auto">
                 <img src="./images/durgaFaceLight.png" class="d-block mx-lg-auto img-fluid" alt="Durga Face"
@@ -173,7 +174,7 @@
     <hr>
 
     <!-- know more about durga puja -->
-    <div class="container px-4 py-5 text-center text-lg-start" id="hanging-icons">
+    <div class="container px-4 py-5 text-center text-lg-start hid" id="hanging-icons">
         <h2 class="pb-2 border-bottom">Know more about Durga Puja</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="col d-flex align-items-start">
@@ -249,7 +250,7 @@
 
 
     <!-- spotify -->
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5 hid">
         <div class="row flex-lg-row align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6 mx-auto">
 
@@ -284,7 +285,7 @@
 
 
     <!-- Pujas we organize -->
-    <div class="container px-4 py-5 text-center text-lg-start" id="hanging-icons">
+    <div class="container px-4 py-5 text-center text-lg-start hid" id="hanging-icons">
         <h2 class="pb-2 border-bottom">Pujas we Organize</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
             <div class="col d-flex align-items-start">
@@ -341,7 +342,7 @@
         </div>
     </div>
     <!-- google maps -->
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5 hid">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6 mx-auto">
 
@@ -396,7 +397,7 @@
             </ul>
         </footer>
     </div>
-    <script src="./index.js"></script>
+    <!-- <script src="./index.js"></script> -->
     <script>
         function inverter(theme) {
             if (theme == "dark") {
@@ -412,6 +413,24 @@
                 });
             }
         }
+    </script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('vis');
+                }
+                // else {
+                //     entry.target.classList.remove('vis');
+                // }
+            });
+        })
+
+
+        const hiddenElements = document.querySelectorAll(".hid");
+
+        hiddenElements.forEach((el) => observer.observe(el));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

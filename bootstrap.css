@@ -228,6 +228,26 @@
 }
 
 
+.nav-bg {
+  --bs-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hid {
+  opacity: 0;
+  /* filter: blur(5px);
+  transform: translateX(-100%); */
+  transition: all 2s;
+}
+
+.vis {
+  opacity: 1;
+  /* filter: blur(0px);
+  transform: translateX(0%);
+  transition: all 2s; */
+}
+
+
 .banner {
   position: relative;
   background: url("./images/Herohow-Durga-Puja-is-celebrated-in-Indian-states-1600x900.webp");
