@@ -12,7 +12,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">Deepkunj Puja Samiti
             </a>
@@ -93,20 +93,19 @@
         </div>
     </nav>
 
-    <div class="container text-center text-lg-start">
+    <div class="container text-center text-lg-start hid my-5 py-5">
         <div class="row py-5">
             <div class="col-lg-6 my-0 py-2 ">
                 <h1 class="display-5 fw-bold brush-wrap lh-1 mb-3 text-light">Donate</h1>
                 <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <clipPath id="rect-cp">
-                            <rect id="rect" x="0" y="0" width="0" height="1">
-                                <animate id="anim" attributeName="width" dur="1s" fill="freeze" calcMode="spline"
-                                    keyTimes="0; 1" keySplines="0.5,0,0.5,1" values="0;1" />
+                            <rect id="rect" x="0" y="0" width="1" height="1">
+
                             </rect>
                         </clipPath>
                         <clipPath id="rect-cp-indefinite">
-                            <rect id="rect" x="0" y="0" width="0" height="1">
+                            <rect id="rect" x="0" y="0" width="1" height="1">
                                 <animate id="anim-indefinite" attributeName="width" dur="1s" calcMode="spline"
                                     keyTimes="0; 1" keySplines="0.5,0,0.5,1" values="0;1"
                                     begin="0s;anim-indefinite.end+1s" />
